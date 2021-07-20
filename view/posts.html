@@ -1,1 +1,12 @@
-<h2>Teste 1</h2>
+<form name="createPostForm">
+  <label>Id do Usuário</label>
+  <input type="number" ng-model="post.userId">
+  <label>Títutlo do Post</label>
+  <input type="text" ng-model="post.title"/>
+  <label>Escreva seu post:</label>
+  <textarea ng-model="post.body" cols="30" rows="10"></textarea>
+  <button ng-click="createPost()">Criar novo post</button>
+</form>
+<div ng-repeat="post in posts">
+  <h3>{{post.title}}</h2>
+</div>
