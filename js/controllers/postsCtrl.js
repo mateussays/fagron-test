@@ -1,9 +1,9 @@
 angular.module('fagronBlog').controller('postsCtrl', function($scope, $http) {
 
-    // $scope.submit = true;
-    // $scope.update = false;
-    // $scope.cancel = false;
-    // $scope.userid = true;
+    $scope.submit = true;
+    $scope.update = false;
+    $scope.cancel = false;
+    $scope.userid = true;
 
     $http({
       method: 'GET',
@@ -19,10 +19,49 @@ angular.module('fagronBlog').controller('postsCtrl', function($scope, $http) {
         url: 'https://jsonplaceholder.typicode.com/posts',
         data: $scope.post
   
-      }).then(function successCallback(response) {
-        console.log(response)
+      }).then(function successRequest(response) {
         $scope.posts.push(response.data);
         alert("Post criado com sucesso!")
       });
     }
+
+
+    $scope.updatePost = function() {
+      $http({
+        method: 'PUT',
+        url: 'https://jsonplaceholder.typicode.com/posts/' + $scope.post.id,
+        data: $scope.post
+      }).then(function successRequest() {
+        alert("Post atualizado com sucesso!")
+      });
+    };
+  
+    $scope.editPost = function(post) {
+
+      $scope.post = post;
+      $scope.submit = false;
+      $scope.update = true;
+      $scope.cancel = true;
+      $scope.userid = false;
+  
+    };
+
+    $scope.cancelUpdate = function() {
+      $scope.post = null;
+      $scope.submit = true;
+      $scope.update = false;
+      $scope.cancel = false;
+      $scope.userid = true;
+    };
+
+    $scope.deletePost = function(post) {
+      $http({
+        method: 'DELETE',
+        url: 'https://jsonplaceholder.typicode.com/posts/' + post.id
+  
+      }).then(function successRequest() {
+        alert("User has deleted Successfully");
+        $scope.posts = $scope.posts.filter((item) => item.id !== post.id)
+      });  
+    };
 });

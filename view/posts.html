@@ -1,12 +1,18 @@
 <form name="createPostForm">
+  <div ng-show="userid">
   <label>Id do Usuário</label>
   <input type="number" ng-model="post.userId">
+  </div>
   <label>Títutlo do Post</label>
   <input type="text" ng-model="post.title"/>
   <label>Escreva seu post:</label>
   <textarea ng-model="post.body" cols="30" rows="10"></textarea>
-  <button ng-click="createPost()">Criar novo post</button>
+  <button ng-click="createPost()" ng-show="submit">Criar novo post</button>
+  <button ng-click="updatePost()" ng-show="update"> Atualizar </button>
+  <button ng-click="cancelUpdate()" ng-show="cancel"> Cancelar </button>
 </form>
 <div ng-repeat="post in posts">
   <h3>{{post.title}}</h2>
+    <button ng-click="editPost(post)">Editar</button>
+    <button ng-click="deletePost(post)">Deletar</button>
 </div>
