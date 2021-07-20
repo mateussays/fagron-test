@@ -1,4 +1,4 @@
-angular.module('fagronBlog').config(($routeProvider) => {
+angular.module('fagronBlog').config( function ($routeProvider) {
   $routeProvider.when('/', {
     templateUrl: 'view/login.html',
     controller: 'loginCtrl',
