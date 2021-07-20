@@ -7,5 +7,9 @@ angular.module('fagronBlog').config( function ($routeProvider) {
     templateUrl: 'view/posts.html',
     controller: 'postsCtrl',
   });
+  $routeProvider.when('/posts/:id', {
+		templateUrl: "view/postdetail.html",
+		controller: "detailCtrl"
+  })
   $routeProvider.otherwise({ redirectTo: "/" });
 });
