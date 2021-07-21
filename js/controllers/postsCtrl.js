@@ -21,6 +21,7 @@ angular.module('fagronBlog').controller('postsCtrl', function($scope, $http, $lo
         $scope.posts.push(response.data);
         alert("Post criado com sucesso!")
       });
+      $scope.post = '';
     }
 
 
@@ -39,7 +40,7 @@ angular.module('fagronBlog').controller('postsCtrl', function($scope, $http, $lo
         method: 'DELETE',
         url: 'https://jsonplaceholder.typicode.com/posts/' + post.id
       }).then(function successRequest() {
-        alert("User has deleted Successfully");
+        alert("Post deletado com sucesso!");
         $scope.posts = $scope.posts.filter((item) => item.id !== post.id)
       });  
     };

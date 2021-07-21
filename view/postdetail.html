@@ -1,7 +1,21 @@
-<h1>{{ detail.title | uppercase }}</h1>
-<p>{{ detail.body }}</p>
-<div ng-repeat="comment in comments">
-  <h4>{{comment.name}}</h4>
-  <span>{{comment.email}}</span>
-  <p>{{comment.body}}</p>
+<div class="detail-container">
+  <div>
+    <img src="./../img/logo.jpg" alt="logo" />
+  </div>
+  <div class="detail-card">
+    <div>
+      <h1>{{ detail.title }}</h1>
+      <hr />
+      <p>{{ detail.body }}</p>
+    </div>
+    <div>
+      <h1>Comentários</h1>
+      <hr>
+    </div>
+    <div ng-repeat="comment in comments" class="comments-card">
+      <span><span class="span-comments">Nome:</span> {{comment.name}}</span>
+      <span><span class="span-comments">E-mail:</span>{{comment.email}}</span>
+      <span><span class="span-comments">Comentário:</span> {{comment.body}}</span>
+    </div>
+  </div>
 </div>

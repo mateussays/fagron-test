@@ -44,7 +44,7 @@ ol, ul {
   list-style: none;
 }
 
-
+/* Login Page */
 
 .login-container {
   display: flex;
@@ -89,6 +89,10 @@ ol, ul {
   padding: 5px 0;
 }
 
+.login-container button:hover {
+  cursor: pointer;
+}
+
 .login-container span {
   background-color: var(--wine-color);
   border-radius: 5px;
@@ -96,4 +100,231 @@ ol, ul {
   margin-top: 20px;
   text-align: center;
   padding: 30px;
+}
+
+/* Posts Page */
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  margin: 60px auto;
+  width: 700px;
+}
+
+.posts-container h3 {
+  align-self: center;
+  color: var(--red-color);
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.posts-container form {
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  color: var(--gray-color);
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+.inputs-posts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.inputs-posts label {
+  margin-right: 5px;
+}
+
+.input-id {
+  border: 2px solid var(--red-color);
+  border-radius: 5px;
+  padding: 3px 5px;
+  width: 50px;
+}
+
+.input-id:focus-visible {
+  border: 2px solid var(--wine-color);
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-title {
+  border: 2px solid var(--red-color);
+  border-radius: 5px;
+  padding: 3px 5px;
+  width: 325px;
+}
+
+.input-title:focus-visible {
+  border: 2px solid var(--wine-color);
+  border-radius: 5px;
+  outline: none;
+}
+
+.textarea-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea-input label {
+  margin-bottom: 10px;
+}
+
+.textarea-input textarea {
+  border: 2px solid var(--red-color);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px 5px;
+}
+
+.textarea-input div {
+  align-self: flex-end;
+}
+
+.textarea-input textarea:focus-visible {
+  border: 2px solid var(--wine-color);
+  border-radius: 5px;
+  outline: none;
+}
+
+.new-post-button {
+  align-self: flex-end;
+  background-color: var(--red-color);
+  border-radius: 5px;
+  border: 2px solid var(--red-color);
+  color: var(--white-color);
+  padding: 5px 0;
+  width: 132px;
+}
+
+.new-post-button:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.update-button {
+  background-color: var(--red-color);
+  border-radius: 5px;
+  border: 2px solid var(--red-color);
+  color: var(--white-color);
+  padding: 5px 0;
+  width: 132px;
+}
+
+.update-button:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancel-button {
+  background-color: var(--white-color);
+  border-radius: 5px;
+  border: 2px solid var(--red-color);
+  color: var(--red-color);
+  padding: 5px 0;
+  width: 132px;
+}
+
+.cancel-button:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.post-title h3 {
+  margin: 15px 0;
+}
+.post-title hr {
+  border-color: var(--red-color);
+  margin-bottom: 15px;
+}
+
+.post-card {
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid #e5e5e5;
+  flex-direction: column;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-card h3 {
+  align-self: flex-start;
+  margin-bottom: 15px;
+}
+
+.post-card div {
+  align-self: flex-end;
+}
+
+.post-card a {
+  color: var(--wine-color);
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.post-card a:hover {
+  color: var(--red-color);
+}
+
+/* Detail Post */
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  margin: 60px auto;
+  width: 700px;
+}
+
+.detail-card {
+  background-color: #E5E5E5;
+  border-radius: 5px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-card h1 {
+  color: var(--red-color);
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.detail-card hr {
+  border-color: var(--red-color);
+  margin-bottom: 15px;
+}
+
+.detail-card p {
+  background-color: var(--white-color);
+  border-radius: 5px;
+  color: var(--gray-color);
+  padding: 32px;
+  margin-bottom: 20px;
+}
+
+.comments-card {
+  background-color: var(--white-color);
+  border-radius: 5px;
+  color: var(--gray-color);
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.comments-card span {
+  margin-bottom: 10px;
+}
+
+.span-comments {
+  color: var(--wine-color);
+  font-weight: 600;
+  margin-right: 5px;
 }
