@@ -2,6 +2,7 @@ angular.module('fagronBlog').controller('loginCtrl', function($scope, $location)
   $scope.username = '';
   $scope.password = '';
   $scope.error = '';
+  $scope.errorSpan = false;
 
   $scope.loginAuthenticated = function (username, password) {
     const userAdmin = 'user@admin.com';
@@ -10,6 +11,7 @@ angular.module('fagronBlog').controller('loginCtrl', function($scope, $location)
       $location.path('/posts');
     } else {
       $scope.error = 'Você não tem permissão pra acessar essa página'
+      $scope.errorSpan = true;
     }
   }
 });

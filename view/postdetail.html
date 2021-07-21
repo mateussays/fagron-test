@@ -1,5 +1,7 @@
-<h1>{{ detail.title }}</h1>
+<h1>{{ detail.title | uppercase }}</h1>
 <p>{{ detail.body }}</p>
 <div ng-repeat="comment in comments">
   <h4>{{comment.name}}</h4>
+  <span>{{comment.email}}</span>
+  <p>{{comment.body}}</p>
 </div>
