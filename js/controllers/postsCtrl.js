@@ -18,7 +18,7 @@ angular.module('fagronBlog').controller('postsCtrl', function($scope, $http, $lo
         url: 'https://jsonplaceholder.typicode.com/posts',
         data: $scope.post
       }).then(function successRequest(response) {
-        $scope.posts.push(response.data);
+        $scope.posts = [...$scope.posts, response.data];
         alert("Post criado com sucesso!")
       });
       $scope.post = '';
@@ -33,6 +33,7 @@ angular.module('fagronBlog').controller('postsCtrl', function($scope, $http, $lo
       }).then(function successRequest() {
         alert("Post atualizado com sucesso!")
       });
+      $scope.post = '';
     };
 
     $scope.deletePost = function(post) {

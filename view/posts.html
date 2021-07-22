@@ -3,11 +3,11 @@
     <h3>ADMINISTRADOR DE POSTAGENS</h3>
     <form name="createPostForm">
       <div class="inputs-posts">
-        <div ng-show="userid">
+        <div ng-show="userid" class="id-post-input">
           <label>Id do Usuário:</label>
           <input type="number" ng-model="post.userId" class="input-id">
         </div>
-        <div>
+        <div class="title-post-input">
           <label>Título do Post:</label>
           <input type="text" ng-model="post.title" class="input-title"/>
         </div>
