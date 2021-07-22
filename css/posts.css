@@ -1,0 +1,220 @@
+/* Posts Page */
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  margin: 60px auto;
+  width: 700px;
+}
+
+.posts-container h3 {
+  align-self: center;
+  color: var(--red-color);
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.posts-container form {
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  color: var(--gray-color);
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+.inputs-posts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.inputs-posts label {
+  margin-right: 5px;
+}
+
+.input-id {
+  border: 2px solid var(--red-color);
+  border-radius: 5px;
+  padding: 3px 5px;
+  width: 50px;
+}
+
+.input-id:focus-visible {
+  border: 2px solid var(--wine-color);
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-title {
+  border: 2px solid var(--red-color);
+  border-radius: 5px;
+  padding: 3px 5px;
+  width: 325px;
+}
+
+.input-title:focus-visible {
+  border: 2px solid var(--wine-color);
+  border-radius: 5px;
+  outline: none;
+}
+
+.textarea-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea-input label {
+  margin-bottom: 10px;
+}
+
+.textarea-input textarea {
+  border: 2px solid var(--red-color);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px 5px;
+}
+
+.textarea-input div {
+  align-self: flex-end;
+}
+
+.textarea-input textarea:focus-visible {
+  border: 2px solid var(--wine-color);
+  border-radius: 5px;
+  outline: none;
+}
+
+.new-post-button {
+  align-self: flex-end;
+  background-color: var(--red-color);
+  border-radius: 5px;
+  border: 2px solid var(--red-color);
+  color: var(--white-color);
+  padding: 5px 0;
+  width: 132px;
+}
+
+.new-post-button:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.update-button {
+  background-color: var(--red-color);
+  border-radius: 5px;
+  border: 2px solid var(--red-color);
+  color: var(--white-color);
+  padding: 5px 0;
+  width: 132px;
+}
+
+.update-button:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancel-button {
+  background-color: var(--white-color);
+  border-radius: 5px;
+  border: 2px solid var(--red-color);
+  color: var(--red-color);
+  padding: 5px 0;
+  width: 132px;
+}
+
+.cancel-button:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.post-title h3 {
+  margin: 15px 0;
+}
+.post-title hr {
+  border-color: var(--red-color);
+  margin-bottom: 15px;
+}
+
+.post-card {
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid #e5e5e5;
+  flex-direction: column;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-card h3 {
+  align-self: flex-start;
+  margin-bottom: 15px;
+}
+
+.post-card div {
+  align-self: flex-end;
+}
+
+.post-card a {
+  color: var(--wine-color);
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.post-card a:hover {
+  color: var(--red-color);
+}
+
+@media (max-width: 800px) {
+  .posts-container {
+    width: 500px;
+    flex-wrap: wrap;
+  }
+  .inputs-posts {
+    flex-direction: column;
+  }
+  .inputs-posts label {
+    font-size: 14px;
+  }
+  .title-post-input {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+  }
+  .textarea-input label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .posts-container {
+    width: 400px;
+  }
+  .input-title {
+    width: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .posts-container {
+    width: 300px;
+  }
+  .input-title {
+    width: 150px;
+  }
+  .update-button {
+    width: 100px;
+  }
+  .cancel-button {
+    width: 100px;
+  }
+  .post-title {
+    width: 300px;
+  }
+  .post-card {
+    width: 300px;
+  }
+}
