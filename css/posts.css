@@ -168,6 +168,21 @@
   color: var(--red-color);
 }
 
+.load-more-btn {
+  align-self: center;
+  background-color: var(--wine-color);
+  border-radius: 5px;
+  border: 2px solid var(--wine-color);
+  color: var(--white-color);
+  padding: 5px 0;
+  width: 200px;
+}
+
+.load-more-btn:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
 @media (max-width: 800px) {
   .posts-container {
     width: 500px;
