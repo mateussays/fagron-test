@@ -25,7 +25,6 @@ angular.module('fagronBlog').controller('postsCtrl', function($scope, $http, $lo
       $scope.post = '';
     }
 
-
     $scope.updatePost = function() {
       $http({
         method: 'PUT',
