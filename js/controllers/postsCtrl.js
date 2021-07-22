@@ -4,6 +4,7 @@ angular.module('fagronBlog').controller('postsCtrl', function($scope, $http, $lo
     $scope.update = false;
     $scope.cancel = false;
     $scope.userid = true;
+    $scope.limit= 5;
 
     $http({
       method: 'GET',
@@ -63,4 +64,8 @@ angular.module('fagronBlog').controller('postsCtrl', function($scope, $http, $lo
       $scope.cancel = false;
       $scope.userid = true;
     };
+
+    $scope.loadMore = function() {
+    $scope.limit = $scope.limit + 5;
+    }
 });
