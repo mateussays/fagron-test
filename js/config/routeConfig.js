@@ -1,4 +1,4 @@
-angular.module('fagronBlog').config( function ($routeProvider) {
+angular.module('fagronBlog').config(function ($routeProvider, $locationProvider) {
   $routeProvider.when('/', {
     templateUrl: 'view/login.html',
     controller: 'loginCtrl',
@@ -12,4 +12,5 @@ angular.module('fagronBlog').config( function ($routeProvider) {
 		controller: "detailCtrl"
   })
   $routeProvider.otherwise({ redirectTo: "/" });
+  $locationProvider.html5Mode(true);
 });
